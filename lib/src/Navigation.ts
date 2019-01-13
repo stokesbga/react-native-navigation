@@ -1,4 +1,4 @@
-import { isArray } from 'lodash';
+import { isArray, throttle } from 'lodash';
 import { NativeCommandsSender } from './adapters/NativeCommandsSender';
 import { NativeEventsReceiver } from './adapters/NativeEventsReceiver';
 import { UniqueIdProvider } from './adapters/UniqueIdProvider';
@@ -62,6 +62,25 @@ export class NavigationRoot {
     this.eventsRegistry = new EventsRegistry(this.nativeEventsReceiver, this.commandsObserver, this.componentEventsObserver);
 
     this.componentEventsObserver.registerOnceForAllComponentEvents();
+    
+    // Throttling
+    const dbnc = fn => throttle(fn, 1000, {leading: true});
+    this.registerComponent = dbnc(this.registerComponent);
+    this.registerComponentWithRedux = dbnc(this.registerComponentWithRedux);
+    this.setRoot = dbnc(this.setRoot);
+    this.setDefaultOptions = dbnc(this.setDefaultOptions);
+    this.mergeOptions = dbnc(this.mergeOptions);
+    this.showModal = dbnc(this.showModal);
+    this.dismissModal = dbnc(this.dismissModal);
+    this.dismissAllModals = dbnc(this.dismissAllModals);
+    this.push = dbnc(this.push);
+    this.pop = dbnc(this.pop);
+    this.popTo = dbnc(this.popTo);
+    this.popToRoot = dbnc(this.popToRoot);
+    this.setStackRoot = dbnc(this.setStackRoot);
+    this.showOverlay = dbnc(this.showOverlay);
+    this.dismissOverlay = dbnc(this.dismissOverlay);
+    this.getLaunchArgs = dbnc(this.getLaunchArgs);
   }
 
   /**
