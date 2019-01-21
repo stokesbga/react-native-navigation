@@ -13,7 +13,6 @@
 
 - (void)showOverlayWindow:(RNNOverlayWindow *)overlayWindow {
 	overlayWindow.previousWindow = [UIApplication sharedApplication].keyWindow;
-	_overlayWindows = [[NSMutableArray alloc] init];
 	[_overlayWindows addObject:overlayWindow];
 	overlayWindow.rootViewController.view.backgroundColor = [UIColor clearColor];
 	[overlayWindow setWindowLevel:UIWindowLevelNormal];

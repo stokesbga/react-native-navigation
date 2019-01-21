@@ -23,10 +23,10 @@
 }
 
 - (void)setComponent:(UIViewController*)viewController componentId:(NSString*)componentId {
-	// UIViewController *existingVewController = [self findComponentForId:componentId];
-	// if (existingVewController) {
-	// 	@throw [NSException exceptionWithName:@"MultipleComponentId" reason:[@"Component id already exists " stringByAppendingString:componentId] userInfo:nil];
-	// }
+	UIViewController *existingVewController = [self findComponentForId:componentId];
+	if (existingVewController) {
+		@throw [NSException exceptionWithName:@"MultipleComponentId" reason:[@"Component id already exists " stringByAppendingString:componentId] userInfo:nil];
+	}
 	
 	[_componentStore setObject:viewController forKey:componentId];
 }
