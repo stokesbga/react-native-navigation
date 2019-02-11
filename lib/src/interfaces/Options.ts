@@ -247,6 +247,10 @@ export interface OptionsTopBarButton {
    * Set the button icon
    */
   icon?: ImageRequireSource;
+   /**
+   * Set the button icon insets
+   */
+  iconInsets?: IconInsets;
   /**
    * Set the button as a custom component
    */
@@ -445,6 +449,11 @@ export interface OptionsBottomTabs {
    * Set a background color for the bottom tabs
    */
   backgroundColor?: Color;
+  /**
+   * Set when tabs are attached to hierarchy consequently when the
+   * RootView's constructor is called.
+   */
+  tabsAttachMode?: 'together' | 'afterInitialTab' | 'onSwitchToTab';
   /**
    * Control the Bottom Tabs blur style
    * #### (iOS specific)
@@ -687,6 +696,25 @@ export interface OptionsAnimationProperties {
   rotation?: OptionsAnimationPropertyConfig;
 }
 
+export interface IconInsets {
+  /**
+   * Configure top inset
+   */
+  top?: number;
+  /**
+   * Configure left inset
+   */
+  left?: number;
+  /**
+   * Configure bottom inset
+   */
+  bottom?: number;
+  /**
+   * Configure right inset
+   */
+  right?: number;
+}
+
 export interface OptionsAnimationPropertiesId extends OptionsAnimationProperties {
   /**
    * ID of the Top Bar we want to animate
@@ -815,6 +843,10 @@ export interface Options {
    * Configure the side menu
    */
   sideMenu?: OptionsSideMenu;
+  /**
+   * Configure the splitView controller
+   */
+  splitView?: OptionsSplitView;
   /**
    * Configure the overlay
    */
