@@ -1,5 +1,6 @@
 #import "UIViewController+RNNOptions.h"
 #import <React/RCTRootView.h>
+#import "FLAnimatedImage.h"
 
 #define kStatusBarAnimationDuration 0.35
 const NSInteger BLUR_STATUS_TAG = 78264801;
@@ -8,9 +9,9 @@ const NSInteger BLUR_STATUS_TAG = 78264801;
 
 - (void)rnn_setBackgroundImage:(UIImage *)backgroundImage {
 	if (backgroundImage) {
-		UIImageView* backgroundImageView = (self.view.subviews.count > 0) ? self.view.subviews[0] : nil;
-		if (![backgroundImageView isKindOfClass:[UIImageView class]]) {
-			backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+		FLAnimatedImageView* backgroundImageView = (self.view.subviews.count > 0) ? self.view.subviews[0] : nil;
+		if (![backgroundImageView isKindOfClass:[FLAnimatedImageView class]]) {
+			backgroundImageView = [[FLAnimatedImageView alloc] initWithFrame:self.view.bounds];
 			[self.view insertSubview:backgroundImageView atIndex:0];
 		}
 		
@@ -28,8 +29,8 @@ const NSInteger BLUR_STATUS_TAG = 78264801;
 	self.modalTransitionStyle = modalTransitionStyle;
 }
 
-- (void)rnn_setSearchBarWithPlaceholder:(NSString *)placeholder 
-						hideNavBarOnFocusSearchBar:(BOOL)hideNavBarOnFocusSearchBar {
+- (void)rnn_setSearchBarWithPlaceholder:(NSString *)placeholder
+			 hideNavBarOnFocusSearchBar:(BOOL)hideNavBarOnFocusSearchBar {
 	if (@available(iOS 11.0, *)) {
 		if (!self.navigationItem.searchController) {
 			UISearchController *search = [[UISearchController alloc]initWithSearchResultsController:nil];

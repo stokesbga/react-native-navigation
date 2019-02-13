@@ -57,6 +57,10 @@
 		268692831E5054F800E2C612 /* RNNStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 268692811E5054F800E2C612 /* RNNStore.m */; };
 		26916C981E4B9E7700D13680 /* RNNReactRootViewCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 26916C961E4B9E7700D13680 /* RNNReactRootViewCreator.h */; };
 		26916C991E4B9E7700D13680 /* RNNReactRootViewCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 26916C971E4B9E7700D13680 /* RNNReactRootViewCreator.m */; };
+		29BA725F2213ABE100E33DAF /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BA725B2213ABE000E33DAF /* FLAnimatedImage.m */; };
+		29BA72602213ABE100E33DAF /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BA725C2213ABE000E33DAF /* FLAnimatedImageView.h */; };
+		29BA72612213ABE100E33DAF /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BA725D2213ABE000E33DAF /* FLAnimatedImageView.m */; };
+		29BA72622213ABE100E33DAF /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BA725E2213ABE100E33DAF /* FLAnimatedImage.h */; };
 		2DCD9195200014A900EDC75D /* RNNBridgeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DCD9193200014A900EDC75D /* RNNBridgeManager.h */; };
 		2DCD9196200014A900EDC75D /* RNNBridgeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD9194200014A900EDC75D /* RNNBridgeManager.m */; };
 		390AD477200F499D00A8250D /* RNNSwizzles.h in Headers */ = {isa = PBXBuildFile; fileRef = 390AD475200F499D00A8250D /* RNNSwizzles.h */; };
@@ -389,6 +393,10 @@
 		26916C941E4B9CCC00D13680 /* RNNRootViewCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNRootViewCreator.h; sourceTree = "<group>"; };
 		26916C961E4B9E7700D13680 /* RNNReactRootViewCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNNReactRootViewCreator.h; sourceTree = "<group>"; };
 		26916C971E4B9E7700D13680 /* RNNReactRootViewCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNNReactRootViewCreator.m; sourceTree = "<group>"; };
+		29BA725B2213ABE000E33DAF /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		29BA725C2213ABE000E33DAF /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		29BA725D2213ABE000E33DAF /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		29BA725E2213ABE100E33DAF /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
 		2DCD9193200014A900EDC75D /* RNNBridgeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNBridgeManager.h; sourceTree = "<group>"; };
 		2DCD9194200014A900EDC75D /* RNNBridgeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNNBridgeManager.m; sourceTree = "<group>"; };
 		390AD475200F499D00A8250D /* RNNSwizzles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNSwizzles.h; sourceTree = "<group>"; };
@@ -1098,6 +1106,10 @@
 		D8AFADB41BEE6F3F00A4592D = {
 			isa = PBXGroup;
 			children = (
+				29BA725E2213ABE100E33DAF /* FLAnimatedImage.h */,
+				29BA725B2213ABE000E33DAF /* FLAnimatedImage.m */,
+				29BA725C2213ABE000E33DAF /* FLAnimatedImageView.h */,
+				29BA725D2213ABE000E33DAF /* FLAnimatedImageView.m */,
 				214545271F4DC7ED006E8DA1 /* Helpers */,
 				7BA500731E2544B9001B9E1B /* ReactNativeNavigation.h */,
 				7BA500741E2544B9001B9E1B /* ReactNativeNavigation.m */,
@@ -1284,6 +1296,7 @@
 				263905B91E4C6F440023D7D3 /* RCCDrawerController.h in Headers */,
 				263905B31E4C6F440023D7D3 /* MMDrawerVisualState.h in Headers */,
 				50451D092042E20600695F00 /* RNNTransitionsOptions.h in Headers */,
+				29BA72602213ABE100E33DAF /* FLAnimatedImageView.h in Headers */,
 				5048862D20BE976D000908DE /* RNNLayoutOptions.h in Headers */,
 				5038A374216CDDB6009280BC /* UIViewController+SideMenuController.h in Headers */,
 				E8A5CD621F49114F00E89D0D /* RNNElement.h in Headers */,
@@ -1308,6 +1321,7 @@
 				503955972174864E00B0A663 /* NullDouble.h in Headers */,
 				263905C81E4C6F440023D7D3 /* SidebarFlipboardAnimation.h in Headers */,
 				7BEF0D1C1E43771B003E96B0 /* RNNLayoutNode.h in Headers */,
+				29BA72622213ABE100E33DAF /* FLAnimatedImage.h in Headers */,
 				50E02BD821A6EE0F00A43942 /* SideMenuOpenMode.h in Headers */,
 				507F43C91FF4F9CC00D9425B /* RNNTopTabOptions.h in Headers */,
 				E8A5CD521F464F0400E89D0D /* RNNAnimator.h in Headers */,
@@ -1518,6 +1532,7 @@
 				263905BC1E4C6F440023D7D3 /* RCCDrawerHelper.m in Sources */,
 				4534E72620CB6724009F8185 /* RNNLargeTitleOptions.m in Sources */,
 				507E7D58201DDD3000444E6C /* RNNAnimationOptions.m in Sources */,
+				29BA725F2213ABE100E33DAF /* FLAnimatedImage.m in Sources */,
 				2145452A1F4DC85F006E8DA1 /* RCTHelpers.m in Sources */,
 				2DCD9196200014A900EDC75D /* RNNBridgeManager.m in Sources */,
 				263905C11E4C6F440023D7D3 /* SidebarAirbnbAnimation.m in Sources */,
@@ -1535,6 +1550,7 @@
 				263905CF1E4C6F440023D7D3 /* TheSidebarController.m in Sources */,
 				5038A3C2216E1E66009280BC /* RNNFontAttributesCreator.m in Sources */,
 				506317AB220B547400B26FC3 /* UIImage+insets.m in Sources */,
+				29BA72612213ABE100E33DAF /* FLAnimatedImageView.m in Sources */,
 				E8A430121F9CB87B00B61A20 /* RNNAnimatedView.m in Sources */,
 				507F43F51FF4FCFE00D9425B /* HMSegmentedControl.m in Sources */,
 				5012242321736883000F5F98 /* NullColor.m in Sources */,
