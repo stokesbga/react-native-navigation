@@ -8,15 +8,30 @@ const NSInteger BLUR_STATUS_TAG = 78264801;
 
 - (void)rnn_setBackgroundImage:(UIImage *)backgroundImage {
 	if (backgroundImage) {
+		NSURL *url = [[NSBundle mainBundle] URLForResource:@"spinner" withExtension:@"gif"];
+		UIImage *gifCompatibleImg = [UIImage animatedImageWithAnimatedGIFURL:url];
+		
 		UIImageView* backgroundImageView = (self.view.subviews.count > 0) ? self.view.subviews[0] : nil;
 		if (![backgroundImageView isKindOfClass:[UIImageView class]]) {
 			backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
 			[self.view insertSubview:backgroundImageView atIndex:0];
 		}
 		
+		// Scale to 128
+		CGRect frame = backgroundImageView.frame;
+		frame.size.width = 128;
+		frame.size.height = 128;
+		backgroundImageView.frame = frame;
+		
+		// Center
+		CGPoint centerImageView = backgroundImageView.center;
+		centerImageView.x = self.view.center.x;
+		centerImageView.y = self.view.center.y;
+		backgroundImageView.center = centerImageView;
+		
 		backgroundImageView.layer.masksToBounds = YES;
-		backgroundImageView.image = backgroundImage;
-		[backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
+		backgroundImageView.image = gifCompatibleImg;
+		[backgroundImageView setContentMode:UIViewContentModeScaleAspectFit];
 	}
 }
 
