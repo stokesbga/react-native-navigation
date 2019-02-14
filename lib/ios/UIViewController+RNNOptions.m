@@ -1,4 +1,5 @@
 #import "UIViewController+RNNOptions.h"
+#import "UIImage+animatedGIF.h"
 #import <React/RCTRootView.h>
 
 #define kStatusBarAnimationDuration 0.35
